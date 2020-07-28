@@ -1,0 +1,255 @@
+/* ...Global style... */
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* ...Colors... */
+:root {
+    --primary-color: #001011;
+    --secondary-color: #75DBCD;
+    --third-color: #FFC61B;
+}
+
+/* ...Font style... */
+h1 {
+    font-weight: 400;
+}
+
+p, button, input, label {
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+/* ...Button style... */
+button {
+    color: #ffffff;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    background-color: var(--primary-color);
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+button:disabled {
+    border: solid 1px var(--primary-color);
+    background-color: transparent;
+    cursor: not-allowed;
+    color: #000000;
+}
+
+/* ...SVG style... */
+svg {
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    fill: #ffffff;
+    background-color: var(--primary-color);
+}
+
+/* ...Body style... */
+body {
+    background-image: url('../img/background.png');
+    background-repeat: repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+#website-container {
+    max-width: 500px;
+    padding: 40px 10px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 499px) {
+    #website-container {
+        padding: 10px 10px;
+    }
+}
+
+/* ...Header style... */
+header {
+    background-color: var(--secondary-color);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+}
+
+header .header-content {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-gap: 30px;
+}
+
+@media only screen and (max-width: 499px) {
+    header .header-content {
+        display: block;
+        text-align: center;
+    }
+}
+
+header .header-content img {
+    width: 120px;
+    border-radius: 50%;
+    border: #ffffff 1px solid;
+}
+
+header aside {
+    display: grid;
+}
+
+header aside h1 {
+    align-self: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+header aside p {
+    font-size: 1.5rem;
+}
+
+/* ...Main section style... */
+main {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+}
+
+main details {
+    padding: 20px;
+    border-bottom: 1px dashed #cccccc;
+    overflow: hidden;
+}
+
+details[open] summary ~ * {
+    animation: sweep .3s ease-in-out;
+}
+
+details[open] summary span svg {
+    background-color: var(--secondary-color);
+}
+
+main details:nth-of-type(6) {
+    border: none;
+}
+
+main details summary {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-gap: 20px;
+}
+
+main details summary span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+main details summary h1 {
+    align-self: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+main details aside {
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    outline: none;
+}
+
+main details aside .maintenance-log, main details aside .check-log,
+main details aside .update-log, main details aside .upload-log {
+    justify-self: end;
+    color: var(--secondary-color);
+}
+
+main details aside .select-file-button {
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(100%);
+    text-align: center;
+    box-shadow: inset 0 0 0 1px var(--third-color);
+    position: relative;
+    overflow: hidden;
+}
+
+main details aside .select-file-button .text {
+    z-index: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+main details aside .select-file-button .progress {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--third-color);
+    transition: 0.3s linear;
+}
+
+main details aside .select-file-button.disabled {
+    pointer-events: none;
+}
+
+main details aside .eventLogger-container, main details aside .remote-directory-container {
+    padding: 5px 5px;
+    border: var(--third-color) 1px solid;
+    border-radius: 4px;
+}
+
+main details aside .remote-directory, main details aside .eventLogger {
+    font-size: 1.2rem;
+}
+
+main details aside .remote-directory {
+    animation: sweep .3s ease-in-out;
+    max-height: 0;
+}
+
+main details aside .eventLogger {
+    max-height: 100px;
+    overflow: auto;
+}
+
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

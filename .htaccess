@@ -1,0 +1,13 @@
+# Disable directory listing
+
+    Options -Indexes
+
+# Removing extensions
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+# Custom index file
+
+    DirectoryIndex login.php

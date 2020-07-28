@@ -1,0 +1,146 @@
+/* ...Global style... */
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* ...Colors... */
+:root {
+    --primary-color: #001011;
+    --secondary-color: #75DBCD;
+    --third-color: #FFC61B;
+}
+
+/* ...Font style... */
+h1 {
+    font-weight: 400;
+}
+
+p, button, input, label {
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+/* ...Button style... */
+button {
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    background-color: var(--primary-color);
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ...SVG style... */
+svg {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    fill: var(--primary-color);
+}
+
+/* ...Body style... */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../img/background.png');
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#website-container {
+    max-width: 320px;
+    padding: 0 10px;
+}
+
+/* ...Header style... */
+header {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+}
+
+header .header-content {
+    padding: 30px;
+    display: grid;
+    grid-gap: 30px;
+    justify-items: center;
+    text-align: center;
+}
+
+header .header-content img {
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+}
+
+header .header-content aside {
+    display: grid;
+    grid-gap: 10px;
+}
+
+header aside h1 {
+    align-self: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+header aside p {
+    font-size: 1.5rem;
+}
+
+/* ...Article style... */
+article {
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+}
+
+article form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+article label {
+    position: relative;
+}
+
+article label span {
+    position: absolute;
+    width: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 40px;
+    border-bottom: 1px solid var(--third-color);
+    outline: none;
+    font-size: 1.6rem;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1px solid var(--primary-color);
+    transition: 0.3s ease;
+}
+
+article form span {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 1.3rem;
+}

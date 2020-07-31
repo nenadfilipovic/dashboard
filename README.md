@@ -42,8 +42,8 @@ Upload code via sftp or whatever.
 
 ## Built With
 
-* [PHP](https://www.php.net/) - Language used
-* [JavaScript](https://www.ecma-international.org/) - Language used
+* [PHP](https://www.php.net/)
+* [JavaScript](https://www.ecma-international.org/)
 
 ## Authors
 

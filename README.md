@@ -10,7 +10,7 @@ App is fully responsive and mobile friendly.
 
 ## Getting Started
 
-Clone this repository
+Clone this repository:
 
 ```
 git clone https://github.com/nenadfilipovic/dashboard
@@ -51,7 +51,7 @@ Upload code via sftp or whatever.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
